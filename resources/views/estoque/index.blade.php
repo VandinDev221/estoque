@@ -4,6 +4,13 @@
     <div class="container mt-4">
         <h1 class="mb-4 text-2xl font-bold text-gray-900">Produtos em Estoque</h1>
 
+        <!-- Exibição de Mensagens de Alerta -->
+        @if(session('alert'))
+            <div class="bg-yellow-300 text-yellow-800 p-4 rounded-lg mb-4">
+                <p>{{ session('alert') }}</p>
+            </div>
+        @endif
+
         <!-- Formulário de Busca e Botão para Adicionar Produto -->
         <div class="mb-4 flex justify-between items-center space-x-2">
             <form action="{{ route('estoque.index') }}" method="GET" class="flex space-x-2 flex-1">
