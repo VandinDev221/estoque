@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EstoqueController;
 
 Route::get('/', function () {
-    return view('resources/views/estoque/index.blade.php');
+    return view('estoque.index');
 });
 
 Route::get('/estoque', [EstoqueController::class, 'index'])->name('estoque.index');
